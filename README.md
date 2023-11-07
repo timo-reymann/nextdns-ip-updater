@@ -30,8 +30,6 @@ services:
   nextdns-ip-updater:
     image: timoreymann/nextdns-ip-updater:latest
     mem_limit: 16m
-    build:
-      context: .
     environment:
       NEXTDNS_CONFIG_ID: <configIdsSeperatedByComma>
       NEXTDNS_ACCOUNT_ID: <accountId>
