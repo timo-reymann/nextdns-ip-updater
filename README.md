@@ -24,7 +24,7 @@ nextdns-ip-updater
 
 ## Usage
 
-```sh
+```yaml
 version: "2.4"
 services:
   nextdns-ip-updater:
