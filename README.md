@@ -7,7 +7,7 @@ nextdns-ip-updater
 [![pre-commit](https://img.shields.io/badge/%E2%9A%93%20%20pre--commit-enabled-success)](https://pre-commit.com/)
 
 <p align="center">
-	<img width="300" src="./.github/images/logo.png">
+	<img width="300" src="https://raw.githubusercontent.com/timo-reymann/nextdns-ip-updater/main/.github/images/logo.png">
     <br />
     Simplistic container to update IP address for NextDNS - timo-reymann/nextdns-ip-updater
 </p>
