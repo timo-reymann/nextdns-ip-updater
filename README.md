@@ -28,6 +28,7 @@ nextdns-ip-updater
 version: "2.4"
 services:
   nextdns-ip-updater:
+    image: timoreymann/nextdns-ip-updater:latest
     mem_limit: 16m
     build:
       context: .
