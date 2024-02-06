@@ -1,3 +1,3 @@
 module github.com/timo-reymann/nextdns-ip-updater
 
-go 1.21.6
+go 1.21.7
