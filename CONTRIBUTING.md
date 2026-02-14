@@ -20,8 +20,8 @@ Pull requests are the best way to propose changes to the codebase (I use [Circle
 5. Make sure your code and commit lints.
 6. Issue that pull request!
 
-## Any contributions you make will be under the MIT
-In short, when you submit code changes, your submissions are understood to be under the same [MIT](https://github.com/timo-reymann/nextdns-ip-updater/blob/main/LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
+## Any contributions you make will be under the Unlicense
+In short, when you submit code changes, your submissions are understood to be under the same [Unlicense](https://github.com/timo-reymann/nextdns-ip-updater/blob/main/LICENSE) that covers the project. Feel free to contact the maintainers if that's a concern.
 
 ## Report bugs using Github's issues
 I use GitHub issues to track public bugs. Report a bug by opening a new issue, it's that easy!
@@ -45,7 +45,7 @@ To make your life easier there is also a handy template available so feel free t
 > ATTENTION: If you DONT provide steps to reproduce the ticket will be closed WITHOUT FURTHER NOTICE!
 
 ## License
-By contributing, you agree that your contributions will be licensed under its MIT.
+By contributing, you agree that your contributions will be licensed under its Unlicense.
 
 
 
