@@ -10,7 +10,8 @@ RUN if [[ "$(arch)" == "x86_64" ]]; then \
     chown 65532:65532 /bin/nextdns-ip-updater
 
 FROM scratch
-LABEL org.opencontainers.image.title="nextdns-ip-updater"
+LABEL 
+LABEL org.opencontainers.image.licenses="unlicense"org.opencontainers.image.title="nextdns-ip-updater"
 LABEL org.opencontainers.image.description="Simplistic container to update IP address for NextDNS - timo-reymann/nextdns-ip-updater"
 LABEL org.opencontainers.image.ref.name="main"
 LABEL org.opencontainers.image.licenses='MIT'
