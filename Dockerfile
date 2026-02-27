@@ -1,3 +1,7 @@
+FROM scratch AS licenses
+COPY LICENSE LICENSE
+COPY NOTICE NOTICE
+
 FROM busybox AS bin
 COPY ./dist /binaries
 RUN if [[ "$(arch)" == "x86_64" ]]; then \
@@ -10,10 +14,11 @@ RUN if [[ "$(arch)" == "x86_64" ]]; then \
     chown 65532:65532 /bin/nextdns-ip-updater
 
 FROM scratch
+COPY --from=license / /
 LABEL org.opencontainers.image.title="nextdns-ip-updater"
 LABEL org.opencontainers.image.description="Simplistic container to update IP address for NextDNS - timo-reymann/nextdns-ip-updater"
 LABEL org.opencontainers.image.ref.name="main"
-LABEL org.opencontainers.image.licenses='MIT'
+LABEL org.opencontainers.image.licenses="Unlicense"
 LABEL org.opencontainers.image.vendor="Timo Reymann <mail@timo-reymann.de>"
 LABEL org.opencontainers.image.authors="Timo Reymann <mail@timo-reymann.de>"
 LABEL org.opencontainers.image.url="https://github.com/timo-reymann/nextdns-ip-updater"
