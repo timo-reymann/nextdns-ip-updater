@@ -28,6 +28,7 @@ jobs:
       - checkout
       - go/with-cache:
           steps:
+            - go/mod-download-cached
             - run:
                 name: Build binaries
                 command: |
