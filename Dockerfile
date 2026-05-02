@@ -1,4 +1,4 @@
-FROM scratch AS licenses
+FROM scratch AS license
 COPY LICENSE LICENSE
 COPY NOTICE NOTICE
 
@@ -13,7 +13,7 @@ RUN if [[ "$(arch)" == "x86_64" ]]; then \
     chmod +x /bin/nextdns-ip-updater && \
     chown 65532:65532 /bin/nextdns-ip-updater
 
-FROM scratch
+FROM timoreymann/ubuntu-runtime:26.04
 COPY --from=license / /
 LABEL org.opencontainers.image.title="nextdns-ip-updater" \
       org.opencontainers.image.description="Simplistic container to update IP address for NextDNS - timo-reymann/nextdns-ip-updater" \
@@ -25,7 +25,6 @@ LABEL org.opencontainers.image.title="nextdns-ip-updater" \
       org.opencontainers.image.documentation="https://github.com/timo-reymann/nextdns-ip-updater" \
       org.opencontainers.image.source="https://github.com/timo-reymann/nextdns-ip-updater.git"
 
-COPY --from=gcr.io/distroless/static-debian12:nonroot / /
 
 USER nonroot
 
