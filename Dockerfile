@@ -13,7 +13,7 @@ RUN if [[ "$(arch)" == "x86_64" ]]; then \
     chmod +x /bin/nextdns-ip-updater && \
     chown 65532:65532 /bin/nextdns-ip-updater
 
-FROM timoreymann/ubuntu-runtime:26.04
+FROM timoreymann/ubuntu-runtime:26.6
 COPY --from=license / /
 LABEL org.opencontainers.image.title="nextdns-ip-updater" \
       org.opencontainers.image.description="Simplistic container to update IP address for NextDNS - timo-reymann/nextdns-ip-updater" \
