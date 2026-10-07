@@ -2,7 +2,6 @@ package main
 
 import (
 	"io"
-	"io/ioutil"
 	"net/http"
 	"os"
 	"strings"
@@ -30,20 +29,18 @@ func main() {
 	}
 }
 
-func updateForConfig(configId string, nextdnsId string) {
+func updateForConfig(configId, nextdnsId string) {
 	print("Updating " + configId + " ... ")
 	url := "https://link-ip.nextdns.io/" + configId + "/" + nextdnsId
 	res, err := http.Get(url)
-	defer func(Body io.ReadCloser) {
-		_ = Body.Close()
-	}(res.Body)
 
 	if err != nil {
 		print(" => ERR: " + err.Error())
 		return
 	}
+	defer res.Body.Close()
 
-	body, err := ioutil.ReadAll(res.Body)
+	body, err := io.ReadAll(res.Body)
 	if err == nil {
 		print(" => " + string(body))
 	} else {
